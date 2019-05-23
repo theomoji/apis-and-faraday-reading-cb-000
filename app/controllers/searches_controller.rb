@@ -1,6 +1,6 @@
 class SearchesController < ApplicationController
-  # def search
-  # end
+  def search
+  end
 
   def foursquare
     @resp = Faraday.get'https://api.foursquare.com/v2/venues/search' do |req|
@@ -11,5 +11,5 @@ class SearchesController < ApplicationController
         req.params['query'] = 'coffee shop'
       end 
     end 
-    render 'search'
+    _renderers 
   end
